@@ -1,0 +1,280 @@
+body {
+    display: flex;
+    flex-flow: column;
+    font-family: 'Noto Serif', serif;
+    font-size: 18px;
+    background: black no-repeat;
+}
+
+#landing {
+    position: relative;
+    height: 768px;
+    width: 100%;
+    color: white;
+    justify-content: center;
+    text-align: center;
+    z-index: -1;
+}
+
+#landing div {
+    width: 100%;
+    margin: auto;
+    margin-top: 25%;
+    flex-wrap: nowrap;
+    flex-flow: column;
+    background-color: rgba(0, 0, 0, 0.2);
+    height: 325px;
+}
+
+h1 {
+    font: #FFF;
+    font-size: 5em;
+    margin: auto;
+}
+
+h3 {
+    font: #FFF normal;
+    font-size: 2.5em;
+    margin: auto;
+}
+
+#landing div img {
+    padding-top: 30px;
+}
+
+#landing .background {
+    opacity: 0;
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%
+}
+
+#landing img:nth-child(1) {
+    -webkit-animation: fade 32s 0s linear infinite;
+    /*animation: fadePaddedFor5Images 32s 0s linear infinite;*/
+}
+
+#landing img:nth-child(2) {
+    -webkit-animation: fade 32s 8s linear infinite;
+    /*animation: fadePaddedFor5Images 32s 8s linear infinite;*/
+}
+
+#landing img:nth-child(3) {
+    -webkit-animation: fade 32s 16s linear infinite;
+    /*nimation: fadePaddedFor5Images 32s 16s linear infinite;*/
+}
+
+#landing img:nth-child(4) {
+    -webkit-animation: fade 32s 24s linear infinite;
+    /*animation: fadePaddedFor5Images 32s 24s linear infinite;*/
+}
+
+@-webkit-keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    20% {
+        opacity: 1;
+    }
+    30% {
+        opacity: 0;
+    }
+}
+
+#threePart {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+#threePart img {
+    height: 300px;
+    border: 2px solid black;
+    flex: 0 0 33.3333%;
+}
+
+#threePart > div {
+    overflow: hidden;
+}
+
+#threePart img:hover {
+    border: 2px solid white;
+}
+
+footer {
+    display: inline-block;
+    text-align: center;
+    margin-top: 25px;
+}
+
+footer .contact {
+    flex: 0 0 75%;
+    text-align: center;
+}
+
+footer span {
+    color: #FFF;
+    font: bold 3em 'Noto Serif', serif;
+    display: block;
+}
+
+footer p {
+    color: #FFF;
+    font: 1.25em 'Noto Serif', serif;
+    width: 750px;
+    display: inline-block;
+}
+
+.icon {
+    display: inline-block;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    box-shadow: 0 2px 2px #999;
+    padding: 0px;
+    text-decoration: none;
+    text-align: center;
+    color: #000;
+    font-size: 25px;
+    font-weight: normal;
+    line-height: 2em;
+    border-radius: 25px;
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    margin: 25px;
+}
+
+.fbIcon {
+    background: #FFF;
+}
+
+.fbIcon:before {
+    font-family: "FontAwesome";
+    content: "\f09a";
+}
+
+.fbIcon:hover {
+    color: #FFF;
+    background: #000;
+}
+
+.emailIcon {
+    background: #FFF;
+}
+
+.emailIcon:before {
+    font-family: "FontAwesome";
+    content: "\f0e0"
+}
+
+.emailIcon:hover {
+    color: #FFF;
+    background: #000;
+}
+
+.instaIcon {
+    background: #FFF;
+}
+
+.instaIcon:before {
+    font-family: "FontAwesome";
+    content: "\f16d"
+}
+
+.instaIcon:hover {
+    color: #FFF;
+    background: #000;
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 2.75em;
+        padding-top: 1em;
+    }
+    h3 {
+        font-size: 1.25em;
+        padding-top: 1em;
+    }
+    #landing {
+        height: 100vh;
+    }
+    #landing div {
+        margin-top: 50%;
+        height: 50vh;
+    }
+    footer span {
+        font-size: 1.75em;
+    }
+    footer p {
+        font-size: .8em;
+        width: 250px;
+    }
+}
+
+@media (min-width: 501px) and (max-width: 599px) {
+    h1 {
+        font-size: 3em;
+    }
+    h3 {
+        font-size: 2em;
+    }
+    #landing {
+        height: 100vh;
+    }
+    #landing div {
+        margin-top: 25%;
+        height: 50vh;
+    }
+    footer span {
+        font-size: 2em;
+    }
+    footer p {
+        font-size: 1.15em;
+        width: 350px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 768px) {
+    h1 {
+        font-size: 4em;
+    }
+    h3 {
+        font-size: 2.25em;
+    }
+    #landing {
+        height: 100vh;
+    }
+    #landing div {
+        margin-top: 25%;
+        height: 50vh;
+    }
+    footer span {
+        font-size: 2.5em;
+    }
+    footer p {
+        font-size: 1.15em;
+        width: 400px;
+    }
+}

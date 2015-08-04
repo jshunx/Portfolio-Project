@@ -44,3 +44,9 @@ textarea {
 button {
     margin-left: .5em;
 }
+
+@media (max-width: 500px) {
+    form {
+        width: 320px;
+    }
+}

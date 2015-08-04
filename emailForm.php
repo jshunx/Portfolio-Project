@@ -7,7 +7,8 @@
 </head>
 
 <body>
-    <form action="/my-handling-form-page" method="post">
+    <form action="contact.php" method="post">
+        <!--need to get some php action here -->
         <div>
             <label for="name">Your Name:</label>
             <input type="text" id="name" />
@@ -17,7 +18,7 @@
             <input type="email" id="mail" />
         </div>
         <div>
-            <label for="msg">Your Message:</label>
+            <label for="msg">Message:</label>
             <textarea id="msg"></textarea>
         </div>
 
@@ -25,6 +26,23 @@
             <button type="submit">Send</button>
         </div>
     </form>
+    
+    <?php
+        if (isset($_REQUEST['email']))  {
+  
+  //Email information
+  $admin_email = "someone@example.com";
+  $email = $_REQUEST['email'];
+  $subject = $_REQUEST['subject'];
+  $comment = $_REQUEST['comment'];
+  
+  //send email
+  mail($admin_email, "$subject", $comment, "From:" . $email);
+  
+  //Email response
+  echo "Thank you for contacting us!";
+  }
+?>
 
 </body>
 
